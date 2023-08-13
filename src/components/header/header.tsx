@@ -4,34 +4,34 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
+
 const Header = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false)
   return (
-    <header className='h-20 py-2 flex justify-around items-center'>
-      <div className='w-fit px-2  flex gap-1 border border-fuchsia-700 p-1   font justify-center items-center cursor-pointer  rounded-md hover:text-white hover:bg-fuchsia-950'>
-        <span className='font-bold w-10 rounded-md text-white bg-fuchsia-950 text-center '>Woo</span>
-        <span className='font-medium text-sm text-center'>commerce</span>
-      </div>
+    <header className='z-10 relative flex w-[full] h-[107px] bg-white justify-between items-center rounded-br-[60px]  drop-shadow-lg' >
+      <section className='ml-[64px] '>
+        <h1 className=' font-bold text-red text-[28px] leading-[42px] '> E-SHOP</h1>
+      </section>
 
-      <div className='w-[40%] h-1/2 flex items-center justify-center'>
-        <form className='flex h-full'>
-          <input className='rounded-l-xl border border-purple-800   ' type="text" placeholder='...searce' name="" id="" />
-          <div className='rounded-r-xl border border-purple-800   bg-white '>
-            <SearchOutlinedIcon color="secondary" />
-          </div>
-        </form>
+      <section className='ml-[267px] w-[273px] h-[40px] flex items-center  relative '>
+        <input type="search" placeholder='Search Products' className='rounded-[50px] text-center drop-shadow-md bg-[#EFEFEF] w-full h-full ' />
+        <img src={require('../../Assets/Other icons/search.png')} alt="sdf" className='w-[22.63px]  h-[21.34px] absolute top-[8.9px] left-[22px]' />
 
-      </div>
-      <div className='flex justify-around w-[10%]'>
-        <button onClick={() => setDarkMode(!darkMode)} className='hover:bg-gray-300 rounded-full' type='button'>{darkMode ? <DarkModeIcon color="secondary" /> : <LightModeIcon color='secondary' />}</button>
-        <AccountCircleIcon color="secondary" />
-        <div>
-          <ShoppingCartIcon color="secondary" />
-          <span className='relative right-3 text-white bottom-1.5'>0</span>
-        </div>
-      </div>
+      </section>
 
-    </header>
+      <section className='w-[321px] h-[20.2px] ml-[40px] flex gap-[35px] text-[13px] leading-[19.5px] font-medium '>
+        <span>HOME</span>
+        <span>PRODUCTS</span>
+        <span>ABOUT</span>
+        <span>CONTACT</span>
+      </section>
+
+      <section className='flex gap-[39px] ml-[40px] mr-[57px]'>
+        <span><img src={require("../../Assets/Other icons/cartIcon.png")} alt="" className='w-[32px] h-[32px]' /></span>
+        <span><img src={require("../../Assets/Other icons/userIcon.png")} alt="" className='w-[32px] h-[32px]' /></span>
+      </section>
+
+    </header >
   )
 }
 

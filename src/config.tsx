@@ -4,6 +4,7 @@ export const BannerImage = () => {
         name: "Furniture",
         Image: require('../src/assets/furniture.jpg')
     },
+
     {
         name: "Home Decors",
         Image: require('../src/assets/homedecore.jpg')
@@ -11,3 +12,5 @@ export const BannerImage = () => {
     return bannerImage
 
 }
+
+
