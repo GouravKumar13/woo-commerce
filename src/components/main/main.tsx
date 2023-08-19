@@ -7,8 +7,9 @@ const Main = () => {
     return (
         <div>
             <HeroSection />
-            <FeaturedProducts />
+            <FeaturedProducts heading={"FeaturedProducts"} top={751} />
             <LimitedOffer />
+            {/* <FeaturedProducts heading={"Latest Products"} top={1926} /> */}
         </div>
     )
 }
