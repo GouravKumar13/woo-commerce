@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LightModeIcon from '@mui/icons-material/LightMode';
+
+import { Link } from "react-router-dom"
+import { Link as ScrollLink } from 'react-scroll';
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false)
+
   return (
-    <header className='z-10 relative flex w-[full] h-[107px] bg-white justify-between items-center rounded-br-[60px]  drop-shadow-lg' >
+    <header className='sticky left-0 z-10 top-0 flex w-[full] h-[107px] bg-white justify-between items-center rounded-br-[60px]  drop-shadow-lg' >
       <section className='ml-[64px] '>
-        <h1 className=' font-bold text-red text-[28px] leading-[42px] '> E-SHOP</h1>
+        <Link to="/">
+          <h1 className=' font-bold text-red text-[28px] leading-[42px] '> E-SHOP</h1>
+        </Link>
       </section>
 
       <section className='ml-[267px] w-[273px] h-[40px] flex items-center  relative '>
@@ -19,16 +19,29 @@ const Header = () => {
 
       </section>
 
-      <section className='w-[321px] h-[20.2px] ml-[40px] flex gap-[35px] text-[13px] leading-[19.5px] font-medium '>
-        <span>HOME</span>
-        <span>PRODUCTS</span>
+      <section className='w-[321px] h-[20.2px] ml-[40px] flex gap-[35px] text-[13px] leading-[19.5px] font-medium  '>
+        <Link to="/">
+          <span>HOME</span>
+        </Link>
+        <Link to="/AllProducts">
+          <span>PRODUCTS</span>
+        </Link>
         <span>ABOUT</span>
-        <span>CONTACT</span>
+
+        <ScrollLink
+          to='footer'
+          spy={true}
+          smooth={true}
+          className='cursor-pointer'
+        >
+          <span>CONTACT</span>
+        </ScrollLink>
+
       </section>
 
       <section className='flex gap-[39px] ml-[40px] mr-[57px]'>
-        <span><img src={require("../../Assets/Other icons/cartIcon.png")} alt="" className='w-[32px] h-[32px]' /></span>
-        <span><img src={require("../../Assets/Other icons/userIcon.png")} alt="" className='w-[32px] h-[32px]' /></span>
+        <img src={require("../../Assets/Other icons/cartIcon.png")} alt="" className='w-[32px] h-[32px]' />
+        <img src={require("../../Assets/Other icons/userIcon.png")} alt="" className='w-[32px] h-[32px]' />
       </section>
 
     </header >

@@ -6,7 +6,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='bg-[#2D2B2B] font-[Poppins] w-full h-[394px] absolute top-[2603px] border-b-2 text-white   flex  justify-around  '>
+    <footer id='footer' className='bg-[#2D2B2B] font-[Poppins] w-full h-[394px] absolute top-[2603px] border-b-2 text-white   flex  justify-around  '>
 
       <section className=' w-[325px] max-h-[108px] mt-[98px] ml-[73px]  mb-[188px]'>
         <h1 className='text-red font-bold text-[30px] leading-[45px] '>
