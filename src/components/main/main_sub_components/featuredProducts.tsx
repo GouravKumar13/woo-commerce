@@ -9,6 +9,8 @@ const FeaturedProducts = ({ heading, top }: any) => {
     const [productsOfCategories, setProductsOfCategories] = React.useState()
 
 
+
+
     // console.log(url + `/catehory/${productCategories}`)
 
     React.useEffect(() => {
@@ -23,6 +25,8 @@ const FeaturedProducts = ({ heading, top }: any) => {
         const productOfCategoriesData = await fetch(url + `/category/${productCategories}`)
         const productOfCategories = await productOfCategoriesData.json()
         setProductsOfCategories(productOfCategories)
+
+
 
     }
 
@@ -66,3 +70,4 @@ const FeaturedProducts = ({ heading, top }: any) => {
 }
 
 export default FeaturedProducts
+
